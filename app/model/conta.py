@@ -10,7 +10,7 @@ class Conta(Base):
     saldo = Column(Float(2))
     tipo = Column(String(50), nullable=False)
     cliente_id = Column(Integer, ForeignKey('cliente.id'), nullable=False)
-    mov = relationship("Movimentacao", back_populates="conta")
+    mov = relationship("Movimentacao")
 
 
     def __init__(self, tipo, numero):

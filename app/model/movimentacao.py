@@ -16,7 +16,6 @@ class Movimentacao(Base):
     # Substituir por tabela para categorizar os tipos de transaçoes
     tipo = Column(String(50), nullable=False)
     conta_id = Column(Integer, ForeignKey('conta.id'))
-    conta = relationship("Conta", back_populates="mov")
 
     def __init__(self, tipo, conta_id, valor):
         self.tipo = tipo
