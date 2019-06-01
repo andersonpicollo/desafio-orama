@@ -16,6 +16,5 @@ Session = scoped_session(session_factory)
 
 def init_session():
 
-    Session.configure(bing=engine)
     from app.model import Base
     Base.metadata.create_all(engine)
