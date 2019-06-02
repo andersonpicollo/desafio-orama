@@ -6,11 +6,11 @@ from sqlalchemy.orm import relationship
 
 class Conta(Base):
 
-    numero = Column(String(10), nullable=True)
+    numero = Column(String(25), nullable=True)
     saldo = Column(Float(2))
     tipo = Column(String(50), nullable=False)
     cliente_id = Column(Integer, ForeignKey('cliente.id'), nullable=False)
-    mov = relationship("Movimentacao")
+    mov = relationship("Movimentacao", back_populates="conta", lazy='joined')
 
     def __init__(self, tipo, numero, cliente_id):
         self.tipo = tipo

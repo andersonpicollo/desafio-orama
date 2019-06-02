@@ -2,8 +2,9 @@
 from marshmallow import Schema, fields
 
 
+
 class MovSchema(Schema):
 
-    data = fields.DateTime()
+    created = fields.Date()
     tipo = fields.String()
     valor = fields.Float()
