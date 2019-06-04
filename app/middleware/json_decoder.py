@@ -12,7 +12,10 @@ class JsonParser(object):
                 raw_json = req.stream.read()
             except Exception:
                 message = "Não foi possivel ler o JSON"
-                raise falcon('Bad request', message)
+                raise falcon.HTTPBadRequest(
+                        "Requisição Invalida",
+                        message
+                )
 
             try:
                 req.context['data'] = json.loads(raw_json.decode('utf-8'))
@@ -22,3 +25,4 @@ class JsonParser(object):
                 raise InvalidParameterError('Não foi possivel ler o json')
         else:
             req.context['data'] = None
+

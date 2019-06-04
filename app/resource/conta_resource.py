@@ -101,3 +101,9 @@ class ContaResource(object):
             raise InvalidParameterError(req.context['data'])
 
         resp.status = falcon.HTTP_201
+        resp.body = json.dumps(
+            {
+                "code": 200,
+                "message": "OK"
+            }
+        )

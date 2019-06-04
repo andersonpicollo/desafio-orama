@@ -106,6 +106,12 @@ class MovResource(object):
             raise InvalidMovError(req.context['data'])
 
         resp.status = falcon.HTTP_200
+        resp.body = json.dumps(
+            {
+                "code": 200,
+                "message": "OK"
+            }
+        )
 
     # Debit
     def on_delete(self, req, resp):

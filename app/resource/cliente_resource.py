@@ -77,6 +77,12 @@ class ClienteResource(object):
             session.add(cliente)
             session.commit()
             resp.status = falcon.HTTP_201
+            resp.body = json.dumps(
+                {
+                    "code": 200,
+                    "message": "OK"
+                }
+            )
             session.close()
         else:
             raise InvalidParameterError(req.context['data'])
