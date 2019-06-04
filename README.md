@@ -65,7 +65,7 @@ gunicorn -b 127.0.0.1:8000 app.main:application
 Requests / Responses
 ====================
 
-- Criar um cliente 
+- __Criar um cliente__
 
 -- REQUEST
 ```
@@ -82,7 +82,7 @@ body = {
     }
 ```
 
-- Detalhes Cliente
+- __Detalhes Cliente__
 
 -- REQUEST
 ```
@@ -125,7 +125,7 @@ path = "/clientes/{cliente_id}"
     }
 ```
 
-- Criar uma conta 
+- __Criar uma conta__
 
 -- REQUEST
 ```
@@ -170,7 +170,7 @@ path = "/contas/{conta_id}"
     }
 ```
 
-- Operação Credito
+- __Operação Credito__
 
 -- REQUEST
 ```
@@ -188,7 +188,7 @@ body = {
 ```
 
 
-- Operação Debito
+- __Operação Debito__
 
 -- REQUEST
 ```
@@ -205,7 +205,7 @@ body = {
     }
 ```
 
-- Extrato por filtro data
+- __Extrato por filtro data__
 
 -- REQUEST
 ```
