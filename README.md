@@ -142,7 +142,7 @@ body = {
     }
 ```
 
-- Extrato Total Conta
+- __Extrato Total Conta__
 
 -- REQUEST
 ```

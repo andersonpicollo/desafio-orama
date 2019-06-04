@@ -68,7 +68,7 @@ class MovResource(object):
             movs = json.dumps(payload, sort_keys=True)
             resp.body = json.dumps(payload, sort_keys=True)
             resp.status = falcon.HTTP_200
-            session.close
+            session.close()
 
         else:
             raise InvalidDateError("Data fim maior que data inicio")
